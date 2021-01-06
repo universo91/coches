@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.form {    
+    width: 90%;
+    position: relative;
+    height: 50px;
+    overflow: hidden; /*para esconder la linea inferior azulada del label*/
+    margin: 0 20px;    
+}
+
+.form input {
+     width: 100%;
+     height: 100%;
+     color: #595f6e;
+     padding-top: 20px;
+     border: none;
+     outline: none; /*para que no aparezca el contorno del input cuando estemos dentro de el*/
+     
+    }
+
+.form label {
+    font-weight: 400 ;
+    color: rgb(160, 160, 160);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    /*background-color: skyblue;*/
+    pointer-events: none;
+    border-bottom: 1px solid rgb(160, 160, 160);
+}
+
+.form label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 2px solid #5fa8d3;
+    transform: translateX( -100% );
+    transition: transform 0.3s ease;
+    
+}
+
+.content-name {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+    transform: translateY( -130% );
+    font-size: 12px;
+    color: #5fa8d3;
+}
+
+.form input:focus + .label-name::after, .form input:valid + .label-name::after {
+    transform: translateX( 0% );
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/input.css">
+    <link rel="stylesheet" href="./css/modal.css">    
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>CRUD choches</title>
+</head>
+<body>
+    <header>
+        <nav>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="no-modals">
+            <div class="contenedor-textos">
+                <h2>Coches</h2>
+                <p>
+                    Los mejores autos, al mejor precio!!
+                </p>
+                <a href="#" class="abrir-modal">Nuevo coche</a>
+            </div>
+            <img src="./img/ilustracion.svg" alt="ilustracion">
+        </section>
+
+        <section class="modal-container">
+            <div class="modal modal-close" id="inputs">               
+                <h2> Datos del coche</h2>
+                <form id = "form-inputs">
+                    <input type="text"  id="index" hidden autocomplete="off">
+                    <div class="form">
+                        <input type="text" name = "marca" autocomplete="off" required>
+                        <label for="marca" class="label-name">
+                            <span class="content-name">Marca</span>
+                        </label>
+                    </div>
+                    <div class="form">
+                        <input type="text" name = "modelo" autocomplete="off" required>
+                        <label for="modelo" class="label-name">
+                            <span class="content-name">Modelo</span>
+                        </label>
+                    </div>
+                    <div class="form">
+                        <input type="text" name = "color" autocomplete="off" required>
+                        <label for="color" class="label-name">
+                            <span class="content-name">Color</span>
+                        </label>
+                    </div>
+                    <div class="form">
+                        <input type="text" name = "anio" autocomplete="off" required>
+                        <label for="anio" class="label-name">
+                            <span class="content-name">Año</span>
+                        </label>
+                    </div>
+                    <div class="form">
+                        <input type="text" name = "precio" autocomplete="off" required>
+                        <label for="precio" class="label-name">
+                            <span class="content-name">Precio</span>
+                        </label>
+                    </div>
+                    <div class="form">
+                        <input type="text" name = "foto" autocomplete="off" required>
+                        <label for="foto" class="label-name">
+                            <span class="content-name">Fotografia</span>
+                        </label>
+                    </div>
+
+                    <div class="footer">
+                        <button class = "button button-primary closee" id = "registrar-coche" > Registar </button>
+                        <button class = "button button-secondary closee" > Cerrar </button>                    
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="table-coches">
+            <h2> Lista de todos los coches</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Color</th>
+                        <th>Año</th>
+                        <th>Precio</th>
+                        <th>Foto</th>
+                        <th>Accion</th>
+                    </tr>
+                    
+                </thead>
+                <tbody id="listado-coches">
+
+                </tbody>
+                
+            </table>
+        </section>
+        
+    </main>
+
+   
+   <script src="./js/coche.js"></script> 
+</body>
+</html>
